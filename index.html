@@ -11,37 +11,57 @@
 
     <form>
 
-    <div id="coffees" class="container col-md-6">
-        <div class="coffeeHeader row">
+    <div class="container">
+        <div class="row col-lg-12">
+
+            <div class="half-row col-lg-6">
+
+                <div class="col-lg-3">
+                    <h4  class="coffeeHeader" id="coffees"></h4>
+                </div>
+                <div class="col-lg-3">
+                    <p class="coffeeRoast"></p>
+                </div>
+                <!--<div class="col-lg-3">-->
+                    <!--<h4  class="coffeeHeader" id="coffees"></h4>-->
+                <!--</div>-->
+                <!--<div class="col-lg-3">-->
+                    <!--<p class="coffeeRoast"></p>-->
+                <!--</div>-->
+
+            </div>
+
+            <div class="half-row col-lg-6">
+
+                <div>
+                    <label for="roast-selection">Roast</label><br>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+                        <option>all</option>
+                    </select>
+
+                </div>
+
+                <div>
+                    <label for="search" class="search-label">Coffee Name</label><br>
+                    <input id="search" type="text" name="search" placeholder="Enter Coffee Here">
+                </div>
+
+                <input id="submit" type="submit" />
+
+            </div>
 
         </div>
-        <div class="coffeeRoast row">
-
-        </div>
-    </div>
-
-    <div>
-        <label for="roast-selection">Roast</label><br>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-            <option>all</option>
-        </select>
 
     </div>
 
-    <div>
-        <label for="search">Coffee Name</label><br>
-        <input id="search" type="text" name="search" placeholder="Enter Coffee Here">
-    </div>
-
-        <input id="submit" type="submit" />
 
     </form>
 
 
-    <!--<table>-->
+    <table>
         <!--<thead>-->
             <!--<tr>-->
                 <!--&lt;!&ndash;<th>ID</th>&ndash;&gt;-->
@@ -61,3 +81,4 @@
 
 </body>
 </html>
+
