@@ -1,5 +1,7 @@
 "use strict";
 
+var searchInput = document.getElementById('search');
+
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<h3>' + coffee.name + '</h3>';
@@ -33,6 +35,7 @@ function updateCoffees(e) {
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
+
     {id: 3, name: 'Cinnamon', roast: 'light'},
     {id: 4, name: 'City', roast: 'medium'},
     {id: 5, name: 'American', roast: 'medium'},
@@ -53,7 +56,7 @@ var roastSelection = document.querySelector('#roast-selection');
 
 div.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
 
 // function findObjectByKey(array, key, value) {
 //     for (var i = 0; i < coffees.length; i++) {
@@ -65,12 +68,28 @@ submitButton.addEventListener('click', updateCoffees);
 // }
 //  var resultObject = findObjectByKey(coffee.name, coffees);
 
-var searchCoffee = document.createElement("INPUT");
-searchCoffee.setAttribute("type", "search");
+function search(nameCoffee) {
 
-function searchCoffee() {
-    var x = document.getElementById("form1");
-    var y = x.elements["search"].value;
+    // outputArr of filtered results
+    var filteredNames = [];
 
-    console.log("y");
+    for (var i = 0; i <= coffees.length; i++) {
+        // check if user input is anywhere in the string of a coffees[i].name with .indexOf()
+        if (coffees[i].name.indexOf(searchInput) === nameCoffee) {
+            console.log("MATCH");
+            filteredNames.push(coffees);
+        }
+    }
+
+    // return the filtered results outputArr
+    return filteredNames;
 }
+
+
+submitButton.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log(search(searchInput.value));
+});
+
+// coffees = search(coffee.name, coffees);
+// console.log(search());
