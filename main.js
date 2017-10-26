@@ -55,5 +55,22 @@ div.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+// function findObjectByKey(array, key, value) {
+//     for (var i = 0; i < coffees.length; i++) {
+//         if (coffees[i][key] === value) {
+//             return coffees[i];
+//         }
+//     }
+//     return null;
+// }
+//  var resultObject = findObjectByKey(coffee.name, coffees);
 
+var searchCoffee = document.createElement("INPUT");
+searchCoffee.setAttribute("type", "search");
 
+function searchCoffee() {
+    var x = document.getElementById("form1");
+    var y = x.elements["search"].value;
+
+    console.log("y");
+}
