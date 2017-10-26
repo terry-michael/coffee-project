@@ -69,15 +69,13 @@ div.innerHTML = renderCoffees(coffees);
 //  var resultObject = findObjectByKey(coffee.name, coffees);
 
 function search(nameCoffee) {
-
     // outputArr of filtered results
     var filteredNames = [];
 
-    for (var i = 0; i <= coffees.length; i++) {
+    for (var i = 0; i < coffees.length; i++) {
         // check if user input is anywhere in the string of a coffees[i].name with .indexOf()
-        if (coffees[i].name.indexOf(searchInput) === nameCoffee) {
-            console.log("MATCH");
-            filteredNames.push(coffees);
+        if (coffees[i].name.indexOf(nameCoffee) !== -1) {
+            filteredNames.push(coffees[i]);
         }
     }
 
